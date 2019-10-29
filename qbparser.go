@@ -19,7 +19,7 @@ func main() {
 	var inputPath string
 	var outPath string
 	flag.StringVar(&symbols, "symbols", "EURUSD,USDJPY", "Symbol name")
-	flag.StringVar(&inputPath, "inputPath", "file.log", "Input File")
+	flag.StringVar(&inputPath, "inputPath", "file.log", "Input Files Separated by comma")
 	flag.StringVar(&outPath, "outputPath", "result", "Out File")
 	flag.Parse()
 	symbolsArray := strings.Split(symbols, ",")
