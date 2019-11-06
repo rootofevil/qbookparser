@@ -19,6 +19,6 @@ steps:
 - powershell: |
     Write-Host '$(GOBIN)'
     Write-Host $env:GOROOT_1_9_X64
-    Write-Host '$GOROOT'
+    Write-Host '$(GOROOT)'
   displayName: 'Set up the Go workspace'
 
