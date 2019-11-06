@@ -16,7 +16,7 @@ variables:
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
 steps:
-- script: |
+- powershell: |
     Write-Host '$(GOBIN)'
   displayName: 'Set up the Go workspace'
 
