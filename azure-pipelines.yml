@@ -11,7 +11,7 @@ pool:
 
 variables:
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
-  GOROOT: '/usr/local/go1.11' # Go installation path
+  GOROOT: '$(GOROOT_1_9_X64)' # Go installation path
   GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
@@ -19,5 +19,6 @@ steps:
 - powershell: |
     Write-Host '$(GOBIN)'
     Write-Host $env:GOROOT_1_9_X64
+    Write-Host '$GOROOT'
   displayName: 'Set up the Go workspace'
 
