@@ -21,5 +21,6 @@ steps:
     Write-Host $env:GOROOT_1_9_X64
     Write-Host '$(GOROOT)'
     Write-Host '$(GOPATH)'
+    Write-Host $env:GOPATH
   displayName: 'Set up the Go workspace'
 
