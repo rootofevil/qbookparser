@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: 'vs2017-win2016'
 
 variables:
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
@@ -17,9 +17,6 @@ variables:
 
 steps:
 - script: |
-    mkdir -p '$(GOBIN)'
-    mkdir -p '$(GOPATH)/pkg'
-    mkdir -p '$(modulePath)'
     Write-Host '$(GOBIN)'
   displayName: 'Set up the Go workspace'
 
