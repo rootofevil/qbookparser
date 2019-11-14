@@ -21,7 +21,7 @@ steps:
     Write-Host '$(GOROOT)'
     Write-Host '$(GOPATH)'
     New-Item -Path '$(modulePath)' -itemType Directory -Force
-    mv $(system.defaultWorkingDirectory)/* $(modulePath)
+    Copy-item $(system.defaultWorkingDirectory)/* $(modulePath)
     go version 
   displayName: 'Set up the Go workspace'
 
