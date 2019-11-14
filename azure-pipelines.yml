@@ -20,6 +20,7 @@ steps:
     Write-Host '$(GOBIN)'
     Write-Host '$(GOROOT)'
     Write-Host '$(GOPATH)'
+    mv $(system.defaultWorkingDirectory)/* $(modulePath)
     go version 
   displayName: 'Set up the Go workspace'
 
