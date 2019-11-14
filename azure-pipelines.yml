@@ -26,7 +26,8 @@ steps:
   displayName: 'Set up the Go workspace'
 
 - script: |
+    '$(GOBIN)'\bin\go version
     '$(GOBIN)'\bin\go build -v .
-    workingDirectory: '$(modulePath)'
+  workingDirectory: '$(modulePath)'
   displayName: 'Build'
 
